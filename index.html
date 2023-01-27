@@ -32,6 +32,144 @@
         ключами, а значения второго массива — значениями.</p>
 
     <script>
+        // 1 Дан объект numbers. Необходимо в консоль вывести все значения больше или равные 3.
+
+        console.log('Задание 1');
+        const numbers = {
+            keyin1: 1,
+            keyin2: 2,
+            keyin3: 3,
+            keyin4: 4,
+            keyin5: 5,
+            keyin6: 6,
+            keyin7: 7,
+        };
+        console.log(numbers);
+        for (let key in numbers) {
+            if (numbers[key] >= 3) console.log(numbers[key]);
+        };
+
+        console.log(numbers);
+
+
+        // 2 Необходимо из объекта, который лежит в константе post вывести значения, к
+        // которым приписан комментарий, в консоль.
+
+        console.log('Задание 2');
+        const post = {
+            author: "John", // вывести этот текст
+            postId: 23,
+            comments: [{
+                userId: 10,
+                userName: "Alex",
+                text: "lorem ipsum",
+                rating: {
+                    likes: 10,
+                    dislikes: 2, // вывести это число
+                },
+            }, {
+                userId: 5, // вывести это число
+                userName: "Jane",
+                text: "lorem ipsum 2", // вывести этот текст
+                rating: {
+                    likes: 3,
+                    dislikes: 1,
+                },
+            }, ],
+        };
+        console.log(post.author);
+        // console.log(post.userName);
+        console.log(post.rating);
+
+
+        // for (const key in post) {
+
+        //     for (const key2 in post[key]) {
+        //         console.log(post[key][key2]);
+        //     }
+        //     for (const key2 in obj[key]) -
+        //         console.log(obj[key]);
+        // }
+
+
+
+        // // 3 Дан массив products, необходимо цену каждого продукта уменьшить на 15% используя метод forEach.
+
+        console.log('Задание 3');
+        const products = [{
+            id: 3,
+            price: 200,
+        }, {
+            id: 4,
+            price: 900,
+        }, {
+            id: 1,
+            price: 1000,
+        }, ];
+        let productSale = products;
+        console.log(productSale);
+        productSale.forEach(product => {
+            console.log("Цена со скидкой на товар " + product.id,
+                " 15% равна ", +(product.price * 0.85));
+        });
+
+
+
+        // // 4 
+        // 1 Необходимо вывести в консоль массив продуктов в котором есть хоть одна фотография используя метод filter.Исходные данные - массив products.
+        // 2 Необходимо отсортировать массив products используя метод sort по цене, начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести отсортированный массив в консоль.
+
+        console.log('Задание 4');
+        const product = [{
+            id: 3,
+            price: 127,
+            photos: [
+                "jpg",
+                "1.jpg",
+                "2.jpg",
+
+            ],
+        }, {
+            id: 5,
+            price: 499,
+            photos: [],
+        }, {
+            id: 10,
+            price: 26,
+            photos: [
+                10,
+                "3.jpg",
+            ],
+        }, {
+            id: 8,
+            price: 78,
+        }, ];
+
+        priceSort = product.sort((a, b) => a.price - b.price);
+        console.log(priceSort);
+
+
+
+        // result = products.filter(item => item.photos === Boolean);
+        // console.log(result);
+
+        // result = products.filter(item => item.id === 10);
+        // console.log(result);
+
+
+
+
+        // 5 Вам необходимо объединить 2 этих массива, чтобы значения первого массива были ключами, а значения второго массива — значениями.
+
+        console.log('Задание 5');
+        const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+        const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
+        const week = {};
+        for (let i = 0; i < en.length; i++) {
+            week[en[i]] = ru[i];
+
+        }
+        console.log(week);
     </script>
 
 </body>
