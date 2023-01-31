@@ -148,13 +148,19 @@
         priceSort = product.sort((a, b) => a.price - b.price);
         console.log(priceSort);
 
+        // Object.values(product).array.forEach(element => {
+        //     console.log(element);
 
+        // });
 
         // result = products.filter(item => item.photos === Boolean);
         // console.log(result);
+        // console.log(filter(...Object.values(photos)));
+        console.log(Object.values(product));
 
-        // result = products.filter(item => item.id === 10);
-        // console.log(result);
+
+        result = products.filter(item => item.id == 10);
+        console.log(result);
 
 
 
